@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <H3>Lista de nomes:</H3>
+    <ul></ul>
+    <input type="text" id="nome">
+    <button class="addnome">+Add nome</button>
+
+</body>
+<script>
+
+    var names = [
+        "DANIEL OBARA",
+        "DIEGO FERNANDES",
+        "CUBO MÁGICO",
+        "CAHFEH ZHOTTYS"
+    ];
+    //pegando elemento UL
+    var elementoLista = document.querySelector("ul");
+    //peganddo o input text element
+    var inputNewName = document.getElementById("nome");
+    //percorrendo nome da lista de nomes
+    for (name of names) {
+        //chamando função que insere o nome
+        adicionaItem(name);
+    }
+    //Adicionando item ao elemento li filho do elemento ul
+    function adicionaItem(name) {
+        console.log("TCL: adicionaItem -> name", name);
+        //pegando elemento li filho de ul
+        var elementoFilho = document.createElement("li");
+        //criando o texto para inserir no li
+        var textoDoFilho = document.createTextNode(name);
+        //inserindo texto ao elemento li
+        elementoFilho.appendChild(textoDoFilho);
+        //inserindo o li ao elemento ul
+        elementoLista.appendChild(elementoFilho);
+    }
+    var btnnome = document.querySelector(".addnome")
+    btnnome.onclick = function adicionar() {
+        if(inputNewName.value != ""){
+            adicionaItem(inputNewName.value);
+            inputNewName.value = "";
+        }else {
+            console.log("Digite um novo nome")
+        }
+        
+    }
+
+
+</script>
+
+</html>

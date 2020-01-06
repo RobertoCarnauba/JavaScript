@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercicio 02</title>
+</head>
+
+<body>
+    <button class='botao' id='btnCriar'>Gerar Quadrado</button>
+
+    
+</body>
+<script>
+    let styleBotao = document.querySelector("#btnCriar")
+    styleBotao.style.color = 'red'
+    styleBotao.style.border = 'solid #ddd'
+    styleBotao.style.margin = 'auto 40%'
+
+    styleBotao.onclick = function () {
+        let makeQuadrado = document.createElement('div')
+        makeQuadrado.style.width = '150px';
+        makeQuadrado.style.height = '150px';
+        makeQuadrado.style.margin = '10px';
+        makeQuadrado.style.display = 'inline-flex';
+        makeQuadrado.style.backgroundColor = 'rgb(66, 66, 66)';
+
+
+        makeQuadrado.onmouseover = function () {
+            makeQuadrado.style.backgroundColor = getRandomColor();
+        }
+
+        makeQuadrado.onclick = function(){
+            alert("Bom dia, esta funfando")
+        }
+
+        makeQuadrado.classList.add('quadrado')
+        document.body.appendChild(makeQuadrado)
+
+
+    }
+
+
+    function getRandomColor() {
+        var letters = "0123456789ABCDEF";
+        var color = "#";
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+
+
+</script>
+
+</html>

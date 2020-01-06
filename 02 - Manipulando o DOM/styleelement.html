@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercicio 02</title>
+</head>
+
+<body>
+    <button class='botao' id='btnCriar' onClick="gerarQuadrado()">Gerar novo</button>
+    <button class='botao' id='btnTri' onClick="makeTri()">Gerar outro</button>
+    <div id="app">
+        <div class="box"></div>
+    </div>
+</body>
+<script>
+    
+    var btnTri = document.querySelector('#btnTri')
+    btnTri.style.color = '#fff'
+    btnTri.style.fontWeight = 'bold';
+    btnTri.style.backgroundColor = '#424242';
+    btnTri.style.border = 'solid #ddd';
+    btnTri.style.width = '200px';
+    btnTri.style.height = '40px';
+    btnTri.style.marginLeft = '45%';
+
+    function makeTri(){
+
+        let triElement = document.createElement("div")
+        triElement.style.width = '10px';
+        triElement.style.height = '19px';
+        triElement.style.margin = '10px';
+        triElement.style.display = 'inline-flex';
+        triElement.style.backgroundColor = 'rgb(66, 66, 66)';
+
+        triElement.classList.add('box1')
+
+        document.body.appendChild(triElement)
+
+
+    }
+
+
+    var btnCriar = document.querySelector('#btnCriar')
+    btnCriar.style.color = '#fff'
+    btnCriar.style.fontWeight = 'bold';
+    btnCriar.style.backgroundColor = 'rgb(233, 40, 40)';
+    btnCriar.style.border = 'solid #ddd';
+    btnCriar.style.width = '200px';
+    btnCriar.style.height = '40px';
+    btnCriar.style.marginLeft = '45%';
+    btnCriar.style.marginBottom  = '10px';
+
+    function gerarQuadrado() {
+
+        let boxElement = document.createElement("div");
+        boxElement.style.width = '100px';
+        boxElement.style.height = '100px';
+        boxElement.style.margin = '10px';
+        boxElement.style.display = 'inline-flex';
+        boxElement.style.border = 'solid #ddd';
+        boxElement.style.backgroundColor = '#f00';
+
+        //adiciona a classe .box na div criada
+        boxElement.classList.add('box');
+
+        document.body.appendChild(boxElement);
+    }
+
+    
+
+  
+  
+    
+
+
+</script>
+
+</html>
