@@ -1,3 +1,5 @@
+//indentifica qual anbiente estamos trabalhando
 {
     "presets": ["@babel/preset-env"]
 }
+
