@@ -1,36 +1,30 @@
-class List {
+// Não esquece de rodar 
+// yarn run dev
+
+class TodoList{
     constructor(){
-        var data = []
-        //localStorage.setItem(data);
-        saveToStorage(data)
+        this.todos = []
     }
 
-    addTodo(){
-        
-        let todoinput = document.querySelector("#input_todo").value
-        this.data.push(todoinput)
-        //this.data.push(TodoList);
-        console.log(this.data)
+    addTodos(){
+        let inputDate = document.getElementById('input_todo').value
+        this.todos.push(inputDate);
+    
+        console.log(this.todos)
     }
-
 }
-
-class TodoList extends List {
-    constructor(){
-        super()
-        
-    }
-   
-}
-
 
 const MinhaLista = new TodoList();
 
-document.getElementById("novotodo").onclick = function(){
-    MinhaLista.addTodo('Novo Todo')
-    
+document.getElementById('novotodo').onclick = function(){
+    MinhaLista.addTodos();
+    let inputDate = document.getElementById('input_todo').value = ""
 }
 
-function saveToStorage(){
-    localStorage.setItem('list', JSON.stringify(data))
-}
+const arr = [1,2,33,4,5,6];
+
+const newArr = arr.map((item, index) =>{
+    return  index ;
+})
+
+console.log(newArr)
