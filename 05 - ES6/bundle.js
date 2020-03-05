@@ -23,6 +23,9 @@ function () {
       var inputDate = document.getElementById('input_todo').value;
       this.todos.push(inputDate);
       console.log(this.todos);
+      let arr = this.todos
+      arr.innerHTML = this.todos
+
     }
   }]);
 

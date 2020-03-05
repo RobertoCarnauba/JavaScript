@@ -10,7 +10,7 @@ class TodoList{
         let inputDate = document.getElementById('input_todo').value
         this.todos.push(inputDate);
     
-        console.log(this.todos)
+        console.log(inputDate)
     }
 }
 
